@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "bitly-backend"
+version = "0.1.0"
+description = ""
+authors = ["Niwaiwa <po2846@gmail.com>"]
+readme = "README.md"
+packages = [{include = "bitly_backend"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+fastapi = "^0.93.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
