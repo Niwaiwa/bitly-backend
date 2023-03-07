@@ -9,6 +9,7 @@ packages = [{include = "bitly_backend"}]
 [tool.poetry.dependencies]
 python = "^3.10"
 fastapi = "^0.93.0"
+uvicorn = {extras = ["standard"], version = "^0.20.0"}
 
 
 [build-system]
