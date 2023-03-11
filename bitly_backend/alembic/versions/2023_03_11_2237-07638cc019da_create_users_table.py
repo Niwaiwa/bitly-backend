@@ -24,9 +24,9 @@ def upgrade() -> None:
     sa.Column('password', sa.String(length=255), nullable=False),
     sa.Column('nickname', sa.String(length=30)),
     sa.Column('api_key', sa.String(length=64), unique=True),
-    sa.Column('is_active', sa.Boolean(), nullable=False, server_default='1'),
-    sa.Column('is_verified', sa.Boolean(), nullable=False, server_default='0'),
-    sa.Column('is_admin', sa.Boolean(), nullable=False, server_default='0'),
+    sa.Column('is_active', sa.Boolean(), nullable=False, server_default=sa.text('TRUE')),
+    sa.Column('is_verified', sa.Boolean(), nullable=False, server_default=sa.text('FALSE')),
+    sa.Column('is_admin', sa.Boolean(), nullable=False, server_default=sa.text('FALSE')),
     sa.Column('created_time', sa.DateTime(), nullable=False, server_default=sa.func.current_timestamp()),
     )
 
