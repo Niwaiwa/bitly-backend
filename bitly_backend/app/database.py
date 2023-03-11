@@ -14,7 +14,9 @@ class Base(DeclarativeBase):
     __allow_unmapped__ = True
     # pass
 
-engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+# sqlite
+# engine = create_engine(DATABASE_URL, connect_args={"check_same_thread": False})
+engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(engine, expire_on_commit=True, autoflush=False, autocommit=False)
 # engine = create_async_engine(DATABASE_URL)
 # async_session_maker = async_sessionmaker(engine, expire_on_commit=False)
